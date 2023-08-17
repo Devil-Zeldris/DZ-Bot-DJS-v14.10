@@ -34,15 +34,15 @@ module.exports = class SendCommand extends Command {
     #actionsWithMessage = async interaction => await interaction.reply({ components: [this.actionsMenu], ephemeral: true });
 
     #send = async interaction => {
-        const { options, channel, client, guild } = interaction;
+        const { options, channel, guild } = interaction;
         const content = options.getString(`message`) || undefined
         const files = options.getAttachment(`file`);
         const user = options.getUser(`user`);
 
-        if (!this.hasPermissions({ guild, permissions: PermissionFlagsBits.ManageWebhooks })) return interaction.reply({ content: `Can't manage webhooks.`, ephemeral: true });
-
         await interaction.deferReply({ ephemeral: true });
         if (user) {
+            if (!this.hasPermissions({ guild, permissions: PermissionFlagsBits.ManageWebhooks })) return interaction.editReply({ content: `Can't manage webhooks.`, ephemeral: true });
+
             const hook = await this.getHook(channel) || await this.createHook(channel);
 
             await hook.send({ username: user.username, avatarURL: user.avatarURL({ format: 'png', size: 4096, dynamic: true }), content, files: files ? [files] : [] });
