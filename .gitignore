@@ -136,3 +136,4 @@ node_modules
 src/DevilRealmModule
 .idea
 src/config
+start.bat

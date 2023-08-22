@@ -73,7 +73,7 @@ module.exports = class SendCommand extends Command {
         const replyInput = new ActionRowBuilder()
             .addComponents(new TextInputBuilder()
                 .setCustomId('reply')
-                .setLabel(`Message for sending to ${channel.name}`)
+                .setLabel(`Replying to ${channel.name.length > 10 ? channel.name.substring(0, 10) : channel.name}...`)
                 .setStyle(TextInputStyle.Paragraph)
                 .setMinLength(1)
                 .setMaxLength(4000)

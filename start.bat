@@ -1,3 +1,0 @@
-node src/core
-
-pause
