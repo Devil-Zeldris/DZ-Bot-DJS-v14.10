@@ -85,7 +85,7 @@ module.exports = class SendCommand extends Command {
 
         await interaction.showModal(replyModal);
 
-        const replyModalInteraction = await interaction.awaitModalSubmit({ filter: (interaction) => interaction.customId === 'replyToMessage', time: 600000 }).catch();
+        const replyModalInteraction = await interaction.awaitModalSubmit({ filter: (interaction) => interaction.customId === 'replyToMessage', time: 600000 }).catch(() => null);
         const { channel: targetChannel, fields } = replyModalInteraction;
 
         await replyModalInteraction.deferReply({ ephemeral: true });
