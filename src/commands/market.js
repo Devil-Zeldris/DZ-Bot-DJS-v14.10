@@ -1,5 +1,5 @@
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, Collection, Locale } = require('discord.js');
-const { Command } = require('../classes/command');
+const { Command } = require('../classes/Command');
 const { WarframeMarketService } = require('../classes/WarframeMarketService');
 const { EmbedUpdaterBuilder } = require('../classes/EmbedUpdater');
 const localizations = new Collection()

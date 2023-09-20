@@ -1,5 +1,5 @@
 const { ChannelType } = require('discord.js');
-const { Direct } = require('../classes/direct');
+const { Direct } = require('../classes/Direct');
 
 module.exports = class DirectMessagesChat extends Direct {
     constructor() {

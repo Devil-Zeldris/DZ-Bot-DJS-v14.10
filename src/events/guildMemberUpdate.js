@@ -1,5 +1,5 @@
-const { Event } = require('../classes/event');
-const { Collection, GatewayDispatchEvents, Events } = require('discord.js');
+const { Event } = require('../classes/Event');
+const { Collection, Events } = require('discord.js');
 const { commandments, rolesForGive } = require('../config.json');
 
 module.exports = class GuildMemberUpdateEvent extends Event {

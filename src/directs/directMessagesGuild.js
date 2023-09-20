@@ -1,4 +1,4 @@
-const { Direct } = require(`../classes/direct`)
+const { Direct } = require(`../classes/Direct`)
 const { ThreadAutoArchiveDuration, ChannelType } = require(`discord.js`);
 
 module.exports = class DirectMessagesGuild extends Direct {

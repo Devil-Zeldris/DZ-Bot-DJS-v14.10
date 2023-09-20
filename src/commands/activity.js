@@ -1,4 +1,4 @@
-const { Command } = require(`../classes/command`);
+const { Command } = require(`../classes/Command`);
 
 module.exports = class ActivityCommand extends Command {
     constructor() {

@@ -1,5 +1,5 @@
 const { StringSelectMenuBuilder, ActionRowBuilder, TextInputBuilder, TextInputStyle, ModalBuilder, PermissionsBitField, ChannelType, ThreadAutoArchiveDuration, StringSelectMenuOptionBuilder, PermissionFlagsBits, Collection, EmbedBuilder } = require("discord.js");
-const { Command } = require(`../classes/command`)
+const { Command } = require(`../classes/Command`)
 //experimental features
 //const { Handler } = require('../classes/handler')
 

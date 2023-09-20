@@ -1,5 +1,5 @@
 const { PermissionFlagsBits, Events } = require('discord.js');
-const { Event } = require('../classes/event');
+const { Event } = require('../classes/Event');
 
 module.exports = class GuildMemberAddEvent extends Event {
     constructor() {
@@ -18,8 +18,13 @@ module.exports = class GuildMemberAddEvent extends Event {
         };
         const invite = invites.new.find(invite => invite.uses > invites.old.get(invite.code).uses);
 
+        if (!invite) return;
+
         invites.old.set(invite.code, invite);
-        client.invitesCache.set(member.id, invite);
+
+        if (!client.invitedMembersCache) await guild.invites.fetch()
+
+        client.invitedMembersCache?.set(member.id, invite);
         return;
     }
 }

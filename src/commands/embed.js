@@ -1,5 +1,5 @@
 const { ThreadAutoArchiveDuration } = require('discord.js');
-const { Command } = require('../classes/command');
+const { Command } = require('../classes/Command');
 
 module.exports = class EmbedCommand extends Command {
     constructor() {

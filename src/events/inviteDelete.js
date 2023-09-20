@@ -1,5 +1,5 @@
 const { Events } = require('discord.js');
-const { Event } = require('../classes/event');
+const { Event } = require('../classes/Event');
 
 module.exports = class InviteDeleteEvent extends Event {
     constructor() {

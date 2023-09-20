@@ -1,5 +1,5 @@
 const { Collection } = require("discord.js");
-const { Command } = require("../classes/command");
+const { Command } = require("../classes/Command");
 
 module.exports = class OwnerPanelCommand extends Command {
     constructor() {

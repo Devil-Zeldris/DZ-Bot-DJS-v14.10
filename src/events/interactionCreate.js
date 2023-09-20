@@ -1,5 +1,5 @@
-const { GatewayDispatchEvents, Events, Collection, Locale } = require("discord.js");
-const { Event } = require("../classes/event");
+const { Events, Collection, Locale } = require("discord.js");
+const { Event } = require("../classes/Event");
 const localizations = new Collection()
 localizations
     .set(Locale.EnglishGB, {

@@ -1,5 +1,5 @@
 const { Events, ChannelType } = require('discord.js');
-const { Event } = require('../classes/event');
+const { Event } = require('../classes/Event');
 
 module.exports = class MessageCreateEvent extends Event {
     constructor() {

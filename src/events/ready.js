@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, Events, ActivityType, } = require('discord.js');
-const { Event } = require('../classes/event');
+const { Event } = require('../classes/Event');
 
 module.exports = class ReadyEvent extends Event {
     constructor() {

@@ -1,5 +1,5 @@
-const { GatewayDispatchEvents, Events } = require("discord.js");
-const { Event } = require("../classes/event");
+const { Events } = require("discord.js");
+const { Event } = require("../classes/Event");
 
 module.exports = class DebugEvent extends Event {
     constructor() {
